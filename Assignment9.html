@@ -1,24 +1,35 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List App</title>
     <link rel="stylesheet" href="Assignment9.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
+    <div class="todo-card">
+        <h2>To-Do List</h2>
+        <div class="subhead">Stay organized and productive</div>
 
-<div class="container">
+        <div class="input-row">
+            <input type="text" id="taskInput" placeholder="What needs to be done?" autofocus>
+            <button id="addBtn">Add</button>
+        </div>
 
-    <h2>To-Do List</h2>
+        <div class="filter-tabs" id="filterTabs">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="active">Active</button>
+            <button data-filter="completed">Completed</button>
+        </div>
 
-    <input type="text" id="taskInput" placeholder="Enter task">
-    <button onclick="addTask()">Add</button>
+        <ul class="task-list" id="taskList"></ul>
 
-    <ul id="taskList"></ul>
+        <div class="task-footer">
+            <span id="taskCount">0 tasks remaining</span>
+        </div>
+    </div>
 
-</div>
-
-<script src="Assignment9.js"></script>
+    <script src="Assignment9.js"></script>
 </body>
 </html>
